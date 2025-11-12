@@ -4,7 +4,7 @@
     long long int N;
     scanf("%lld",&N);
 
-    if (N<100)
+    if (10<N&&N<100)
     {
         printf("2");
         putchar(' ');
@@ -13,6 +13,17 @@
         int sum99=m+t;
         printf("%d",sum99);
     }
+    
+    else if (N>0&&N<10){
+    printf("1");
+    putchar(' ');
+    int m=N/10;
+    int t=N%10;
+    int sum99=m+t;
+    printf("%d",sum99);
+    }
+
+
     else{
 
     int fenmu=10;
