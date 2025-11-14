@@ -36,18 +36,18 @@ int main(void) {
 
     int q;
     scanf("%d",&q);
-    int add[q];//这里决定了我要加入多少元苏
+  
+    int m;
+    int x;
 
-        int m;
-        for ( m = 0; m < q; m++)
-        {
-            scanf("%d",arr[m]);
-            
+    for ( m = 0; m < q; m++)
+    {
+        int x;
+        scanf("%d",&x);
+        
 
 
-
-            
-        }
+    }
         
 
     for (int i = 0; i < q; i++)//外层循环控制几次插入
