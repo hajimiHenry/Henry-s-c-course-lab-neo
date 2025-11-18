@@ -4,9 +4,15 @@ int main(void) {
     char s[1001];
     int letters = 0, digits = 0, spaces = 0, others = 0;
 
-    if (fgets(s, sizeof(s), stdin) == NULL) {
-        return 0;
-    }
+    int i=0;
+    int ch;
+    do
+    {
+      ch=getchar ();
+      s[i++]=(char)ch;
+    } while(ch!='\n');
+    
+    
 
     for (int i = 0; s[i] != '\0'; i++) {
         char c = s[i];
