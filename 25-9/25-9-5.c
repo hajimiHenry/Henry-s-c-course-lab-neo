@@ -5,7 +5,8 @@ int main (void){
     int w;
     scanf("%d",&w);
 
-    int sum=13;//从一月开始计算，第一个要算的就是13
+    int sum=12;
+    //从一月开始计算，第一个要算的就是12
     //月份循环
     for (int i = 1; i <= 12;i++)
     {
@@ -20,7 +21,8 @@ int main (void){
       {
         printf("%d\n",i);/* code */
       }
-        sum+=days[i-1];
+      
+      sum+=days[i-1];
     }
     return 0;
 }
