@@ -3,7 +3,7 @@
 
 int main(void){
     char arr[20];
-    scanf("%d",arr);
+    scanf("%c",arr);
 
     printf("%zu",strlen(arr));
 }
