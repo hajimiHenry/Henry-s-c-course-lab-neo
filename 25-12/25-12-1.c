@@ -1,5 +1,5 @@
 #include<stdio.h>
-void aver_stu(int a[10][5]);
+void aver_sco(int a[10][5]);
 void aver_stu(int a[10][5]);
 void max(int a[10][5]);
 
@@ -18,9 +18,9 @@ int main()
 
 void aver_stu(int a[10][5])
 {
-    int sum=0;
     for (int k = 0; k < 10; k++)
     {
+        int sum=0;
         for (int i = 0; i < 5; i++)
         {
             sum+=a[k][i];
@@ -28,15 +28,16 @@ void aver_stu(int a[10][5])
         int aver=sum/5;
         printf("%3d",aver);
     }
+    printf ("\n");
 }
 
-void aver_stu(int a[10][5])
+void aver_sco(int a[10][5])
 {
     int i;
     int k;
-    int sum=0;
     for ( i = 0; i < 5; i++)
     {
+        int sum=0;
         for ( k = 0; k < 10; k++)
         {
             sum+=a[k][i];
@@ -44,6 +45,7 @@ void aver_stu(int a[10][5])
         int aver=sum/10;
         printf("%3d",aver);
     }
+    printf("\n");
 }
 
 void max(int a[10][5])
@@ -51,6 +53,7 @@ void max(int a[10][5])
     int i;
     int k;
     int max=a[0][0];
+    int max_i=0; int max_k=0;
     for ( i = 0; i < 10; i++)
     {
         for ( k = 0; k < 5; k++)
@@ -62,8 +65,10 @@ void max(int a[10][5])
             else
             {
                 max=a[i][k];
+                max_i=i;
+                max_k=k;
             }
         }
-        printf("%3d",max);
     }
+printf("%3d%3d\n", max_i + 1, max_k + 1);
 }
