@@ -1,5 +1,32 @@
 #include <stdio.h>
 
+static void swap_int_codex(int *a, int *b);
+static int is_fixed_codex(int *p, int *fixed[], int fixed_count);
+void adjust_codex(int (*a)[5]);
+
+int main(void)
+{
+    int a[5][5];
+    int i, j;
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", *(a + i) + j);
+        }
+    }
+
+    adjust_codex(a);
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("%3d", *(*(a + i) + j));
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
 static void swap_int_codex(int *a, int *b)
 {
     int t = *a;
@@ -59,27 +86,4 @@ void adjust_codex(int (*a)[5])
             fixed[1 + k] = target;
         }
     }
-}
-
-int main(void)
-{
-    int a[5][5];
-    int i, j;
-
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            scanf("%d", *(a + i) + j);
-        }
-    }
-
-    adjust_codex(a);
-
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            printf("%3d", *(*(a + i) + j));
-        }
-        printf("\n");
-    }
-
-    return 0;
 }
