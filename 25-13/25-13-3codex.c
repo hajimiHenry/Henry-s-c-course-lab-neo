@@ -24,6 +24,17 @@ int main()
 
 char *search( char *s, char *t )
 {
+    char *p, *ps, *pt;
+    if (t == NULL || *t == '\0') return s; /* 空子串：默认匹配到开头 */
 
-    
+    for (p = s; *p != '\0'; p++) {
+        ps = p;
+        pt = t;
+        while (*ps != '\0' && *pt != '\0' && *ps == *pt) {
+            ps++;
+            pt++;
+        }
+        if (*pt == '\0') return p; /* t 全匹配完，返回在 s 中的起始位置 */
+    }
+    return NULL;
 }

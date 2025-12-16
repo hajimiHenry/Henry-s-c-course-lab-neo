@@ -20,6 +20,10 @@ int main()
 /* 你的代码将被嵌在这里 */
 void strmcpy( char *t, int m, char *s )
 {
+    if (m <= 0) {
+        s[0] = '\0';
+        return;
+    }
     int len = 0;
     while (t[len]!='\0')
     {
