@@ -5,8 +5,6 @@ int main(void)
     char b;
     scanf("%d %c",&a,&b);
 
-     
-
     for (int i = 0; i < a; i++)
     {
         char cur=b;
@@ -33,7 +31,7 @@ int main(void)
 
             /* code */
         }
-
+        
         printf("\n");
 
         /* code */
