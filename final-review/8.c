@@ -2,6 +2,7 @@
     int judge(int n,int a,int b,int c);
 
 
+    int index=0;
     int main(void)
     {
         int N,M,a,b,c;
@@ -11,9 +12,17 @@
         {
             if (judge(i,a,b,c))
             {
-                printf("%d\n",i);/* code */
+                printf("%d\n",i);
+                index++;
             }
         }
+
+        if (index==0)
+        {
+            printf("None");
+            /* code */
+        }
+        
     }
     int judge(int n,int a,int b,int c)
     {
